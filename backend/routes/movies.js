@@ -4,7 +4,14 @@ const { Movie } = require("../models");
 
 router.post("/", async (req, res) => {
   try {
-    const movie = await Movie.create(req.body);
+    const { name, releaseDate, averageRating } = req.body;
+    const mId = name.replace(/\s+/g, "-");
+    const movie = await Movie.create({
+      name: name,
+      mId: mId,
+      releaseDate: releaseDate,
+      averageRating: averageRating,
+    });
     console.log("Movie created:", movie);
     res.status(201).json(movie);
   } catch (error) {

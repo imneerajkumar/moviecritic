@@ -26,3 +26,14 @@
   color: #6558f5;
   background-color: #fff;
 }
+.input {
+  border: 1px solid black;
+  padding: 0.5rem;
+  width: 100%;
+  margin-bottom: 0.75rem;
+}
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+}

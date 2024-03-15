@@ -1,10 +1,21 @@
 const express = require("express");
 const router = express.Router();
-const { Review } = require("../models");
+const { Movie, Review } = require("../models");
 
 router.post("/", async (req, res) => {
   try {
     const review = await Review.create(req.body);
+    const movieId = req.body.MovieMId;
+    const reviewsForMovie = await Review.findAll({
+      where: { MovieMId: movieId },
+    });
+    const totalRating = reviewsForMovie.reduce(
+      (sum, review) => sum + review.rating,
+      0
+    );
+    const averageRating = (totalRating / reviewsForMovie.length).toFixed(2);
+
+    await Movie.update({ averageRating }, { where: { mId: movieId } });
     res.status(201).json(review);
   } catch (error) {
     res.status(400).json({ error: error.message });
