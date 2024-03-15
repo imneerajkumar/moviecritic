@@ -28,7 +28,7 @@
   display: grid;
   grid-gap: 2rem;
   grid-template-columns: repeat(3, 1fr);
-  margin-bottom: 1.25rem;
+  margin-bottom: 3rem;
 }
 
 @media (max-width: 786px) {

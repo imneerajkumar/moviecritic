@@ -9,7 +9,7 @@ function ReviewList() {
   const [reviews, setReviews] = useState<any>([]);
   const [movie, setMovie] = useState<any>([]);
   const params = useParams();
-  const url = "http://localhost:5000";
+  const url = "https://moviecritic-v7a5.onrender.com";
 
   const getMovie = async () => {
     const res = await axios.get(`${url}/movies/${params.id}`);

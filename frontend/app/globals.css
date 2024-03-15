@@ -8,3 +8,9 @@
 h4 {
   color: #6558f5;
 }
+.ant-btn-default {
+  display: none;
+}
+.ant-btn-primary {
+  background-color: #6558f5;
+}

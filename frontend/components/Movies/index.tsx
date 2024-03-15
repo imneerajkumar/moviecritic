@@ -8,7 +8,7 @@ function MovieList() {
   const [movies, setMovies] = useState([]);
   const [input, setInput] = useState<string>("");
   const [filteredItems, setFilteredItems] = useState([]);
-  const url = "http://localhost:5000";
+  const url = "https://moviecritic-v7a5.onrender.com";
 
   const filterItems = (value: string) => {
     return movies.filter((item: any) =>
