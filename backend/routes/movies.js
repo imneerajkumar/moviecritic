@@ -1,15 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const Movie = require("../models/movie");
+const { Movie } = require("../models");
 
 router.post("/", async (req, res) => {
-  const { name, releaseDate, averageRating } = req.body;
   try {
-    const movie = await Movie.create({
-      name: name,
-      releaseDate: releaseDate,
-      averageRating: averageRating,
-    });
+    const movie = await Movie.create(req.body);
     console.log("Movie created:", movie);
     res.status(201).json(movie);
   } catch (error) {
