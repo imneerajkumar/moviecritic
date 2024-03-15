@@ -1,0 +1,22 @@
+.header {
+  position: sticky;
+  top: 0;
+  background-color: #e3e8ed;
+  padding: 1rem 1.5rem;
+  z-index: 2;
+}
+.headerLogo {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+.btn {
+  border: none;
+  color: #fff;
+  background-color: #6558f5;
+  margin-left: 0.5rem;
+}
+.btn.outline {
+  border: 1px solid #6558f5;
+  color: #6558f5;
+  background-color: #fff;
+}

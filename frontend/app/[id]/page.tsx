@@ -1,12 +1,12 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import MovieList from "@/components/Movies";
+import ReviewList from "@/components/Reviews";
 
-export default function Home() {
+export default function MovieDetail() {
   return (
     <div>
       <Header />
-      <MovieList />
+      <ReviewList />
       <Footer />
     </div>
   );

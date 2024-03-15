@@ -1,0 +1,15 @@
+.movieCard {
+  width: 100%;
+  background-color: #e0defd;
+  padding: 1.5rem;
+  cursor: pointer;
+}
+
+.reviewCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  border: 3px solid #e0defd;
+  padding: 1.5rem;
+}

@@ -1,0 +1,39 @@
+.movies {
+  width: 100%;
+  padding: 3rem 2rem;
+}
+.searchContainer {
+  display: flex;
+  align-items: center;
+  width: 45%;
+  padding: 0.25rem 0.75rem;
+  position: relative;
+  border: 2px solid #6558f5;
+  margin-bottom: 2rem;
+}
+.inputContainer {
+  width: 90%;
+}
+.input {
+  border: none;
+  width: 100%;
+  padding: 10px 0;
+  margin-left: 0.5rem;
+}
+.input:focus {
+  outline: none;
+}
+.movieList {
+  width: 100%;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 786px) {
+  .movieList {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1.5rem;
+  }
+}
